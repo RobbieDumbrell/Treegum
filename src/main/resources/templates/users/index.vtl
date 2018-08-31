@@ -8,6 +8,17 @@
         <input class="search-adverts" type="search" name="search" placeholder="Search Users...">
     </form>
 
+    <form class="form-container" action="/users" method="get">
+        <label for="sort">Sort By:</label>
+        <select name="sort" id="sort">
+            <option disabled selected value> -- select -- </option>
+            <!--<option value="High to Low">Rating High to Low</option>-->
+            <!--<option value="Low to High">Rating Low to High</option>-->
+            <option value="Username A to Z">Username A to Z</option>
+        </select>
+        <input class="button-sort" type="submit" value="Click to Sort">
+    </form>
+
     <table>
 
         <tr>

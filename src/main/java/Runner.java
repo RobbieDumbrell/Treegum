@@ -4,6 +4,7 @@ import db.DBHelper;
 import db.DBUser;
 import models.*;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class Runner {
@@ -141,6 +142,10 @@ public class Runner {
         List<Advert> getHighToLowPriceVehicles = DBAdvert.getAllActiveAdvertsDescendingPriceCategory(Category.VEHICLES);
 
         List<Advert> getAdvertsSortedByCategoryAtoZ = DBAdvert.getAllActiveAdvertsSortedByCategoryAtoZ();
+
+//        List<User> usersWithAverageRatingsAsc = DBUser.getAllSortedByAverageRatingAscending();
+//        List<User> usersWithAverageRatingsDesc = DBUser.getAllSortedByAverageRatingDescending();
+        List<User> usersWithAverageRatingsAtoZ = DBUser.getAllSortedByUserNameAtoZ();
 
     }
 

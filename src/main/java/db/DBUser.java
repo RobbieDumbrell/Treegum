@@ -7,8 +7,13 @@ import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 import static db.DBHelper.getAll;
@@ -95,5 +100,60 @@ public class DBUser {
         return false;
     }
 
+
+//    public static List<User> getAllSortedByAverageRatingAscending(){
+//
+//        session = HibernateUtil.getSessionFactory().openSession();
+//        List<User> results = null;
+//        try {
+//            Criteria cr = session.createCriteria(User.class);
+//            cr.createAlias("ratingsReceived", "rating");
+//
+//            results = cr.list();
+//        } catch (HibernateException e) {
+//            e.printStackTrace();
+//        } finally {
+//            session.close();
+//        }
+//        return results;
+//    }
+//
+//    public static List<User> getAllSortedByAverageRatingDescending(){
+//
+//        session = HibernateUtil.getSessionFactory().openSession();
+//        List<User> results = null;
+//        try {
+//            Criteria cr = session.createCriteria(User.class);
+//            cr.createAlias("ratingsReceived", "rating");
+//            cr.addOrder(Order.desc("rating.value"));
+//            results = cr.list();
+//        } catch (HibernateException e) {
+//            e.printStackTrace();
+//        } finally {
+//            session.close();
+//        }
+//        return results;
+//    }
+
+    public static List<User> getAllSortedByUserNameAtoZ(){
+
+        session = HibernateUtil.getSessionFactory().openSession();
+        List<User> results = null;
+        try {
+            Criteria cr = session.createCriteria(User.class);
+            cr.addOrder(Order.asc("username"));
+            results = cr.list();
+        } catch (HibernateException e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return results;
+    }
+
+
+
 }
+
+
 

@@ -24,7 +24,22 @@ public class UserController {
         //    INDEX
         get("/users", (req, res) -> {
 
-            List<User> allUsers = DBHelper.getAll(User.class);
+            List<User> allUsers;
+
+            String sort = req.queryParams("sort");
+
+            if (sort == null) {
+                allUsers = DBHelper.getAll(User.class);
+            }
+//            else if (sort.equals("High to Low")) {
+//                allUsers = DBUser.getAllSortedByAverageRatingAscending();
+//            } else if (sort.equals("Low to High")) {
+//                allUsers = DBUser.getAllSortedByAverageRatingDescending();
+//            } else if (sort.equals("Username A to Z")) {
+                allUsers = DBUser.getAllSortedByUserNameAtoZ();
+//            } else {
+//                allUsers = DBHelper.getAll(User.class);
+//            }
 
             String searchEntry = req.queryParams("search");
             List<User> searchResults = DBUser.getAllSearchedActiveUsers(searchEntry);
