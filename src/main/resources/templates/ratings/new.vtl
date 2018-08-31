@@ -20,7 +20,7 @@
         <select name="ratingValue" id="ratingValue" required="true">
             #foreach ($ratingValue in $allRatingValues)
             <option value="$ratingValue">
-                $ratingValue.getRatingNumber()
+                $ratingValue.getRatingNumber() ★
             </option>
             #end
         </select>

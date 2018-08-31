@@ -21,9 +21,14 @@
         <tr>
             <td><a href="/users/$user.getId()">$user.getUsername()</a></td>
             #if ($user.calculateAverageRatingReceived() != $null)
-            <td>$user.calculateAverageRatingReceived()</td>
+            <td>
+                <a href="/users/$user.getId()/ratings">$user.calculateAverageRatingReceived()</a>
+                #foreach ($int in [1..$user.calculateAverageRatingReceived()])
+                <i class="fas fa-star"></i>
+                #end
+            </td>
             #else
-            <td>-</td>
+            <td>(no reviews have been made)</td>
             #end
         </tr>
         #end
@@ -34,9 +39,14 @@
         <tr>
             <td><a href="/users/$user.getId()">$user.getUsername()</a></td>
             #if ($user.calculateAverageRatingReceived() != $null)
-            <td><a href="/users/$user.getId()/ratings">$user.calculateAverageRatingReceived()</a></td>
+            <td>
+                <a href="/users/$user.getId()/ratings">$user.calculateAverageRatingReceived()</a>
+                #foreach ($int in [1..$user.calculateAverageRatingReceived()])
+                <i class="fas fa-star"></i>
+                #end
+            </td>
             #else
-            <td>-</td>
+            <td>(no reviews have been made)</td>
             #end
         </tr>
         #end

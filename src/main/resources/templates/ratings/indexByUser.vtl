@@ -12,7 +12,11 @@
     #foreach ($rating in $ratingsReceived)
         <tr>
             <td><a href="/users/$rating.getRater().getId()">$rating.getRater().getUsername()</a></td>
-            <td>$rating.getValue().getRatingNumber()</td>
+            <td>
+                #foreach ($int in [1..$rating.getValue().getRatingNumber()])
+                <i class="fas fa-star"></i>
+                #end
+            </td>
             <td>$rating.getMessage()</td>
         </tr>
     #end
