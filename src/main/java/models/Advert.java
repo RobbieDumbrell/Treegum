@@ -18,6 +18,7 @@ public class Advert {
     private User user;
     private Boolean archived;
     private List<Comment> comments;
+    private String uploadedImageURL;
 
     public Advert(String title, String description, Category category, double price, User user) {
         this.title = title;
@@ -113,4 +114,12 @@ public class Advert {
         this.archived = true;
     }
 
+    @Column(name = "uploaded_image_url")
+    public String getUploadedImageURL() {
+        return uploadedImageURL;
+    }
+
+    public void setUploadedImageURL(String uploadedImageURL) {
+        this.uploadedImageURL = uploadedImageURL;
+    }
 }

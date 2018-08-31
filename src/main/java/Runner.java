@@ -50,6 +50,8 @@ public class Runner {
         Advert advert9 = new Advert("Computer Monitor", "20 inch computer monitor", Category.ELECTRONICS, 100, user5);
         Advert advert10 = new Advert("Used Motorbike", "Used motorbike for sale. Message for details", Category.VEHICLES, 1400, user2);
 
+        advert1.setUploadedImageURL("13673011934754037323");
+
         DBHelper.save(advert1);
         DBHelper.save(advert2);
         DBHelper.save(advert3);
@@ -128,7 +130,7 @@ public class Runner {
 
 //        List<User> searchUsers = DBUser.getAllSearchedActiveUsers("robbie");
 //
-//        Double averageRatinguser2 = DBUser.calculateAverageRatingForUser(user2);
+//        Double averageRatingUser2 = DBUser.calculateAverageRatingForUser(user2);
         List<User> searchUsers = DBUser.getAllSearchedActiveUsers("danny");
 
 
