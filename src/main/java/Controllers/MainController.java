@@ -6,11 +6,14 @@ import spark.template.velocity.VelocityTemplateEngine;
 import java.util.HashMap;
 
 import static spark.Spark.get;
+import static spark.Spark.port;
 import static spark.Spark.staticFileLocation;
 
 public class MainController {
 
     public static void main(String[] args) {
+
+        port(getHerokuAssignedPort());
 
         staticFileLocation("/public");
 
@@ -29,6 +32,14 @@ public class MainController {
 
         }, new VelocityTemplateEngine());
 
+    }
+
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567;
     }
 
 }
