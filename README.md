@@ -11,7 +11,7 @@ This was a week-long paired project that I completed with one other student duri
 Take a look and have a play around with the app as deployed on Heroku here:
 https://robbie-treegum.herokuapp.com/
 
-## How could it be extended?
+## How could it be extended/improved?
 
 - User Login:
 
