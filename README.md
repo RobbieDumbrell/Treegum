@@ -11,6 +11,12 @@ This was a week-long paired project that I completed with one other student duri
 Take a look and have a play around with the app as deployed on Heroku here:
 https://robbie-treegum.herokuapp.com/
 
-## How could it be improved?
+## How could it extended?
 
->The biggest improvement point for this app is the fact that it lacks a login system, which means that it is currently an app >based heavily on trust that you only act as yourself - but there is nothing stopping you from making a review or posting an >advert as another user. As the key aim of this project was to consolidate the learning previous to the project, this was >overlooked and not considered part of the MVP.
+- User Login:
+
+The biggest extension point for this app is the fact that it lacks a login system, which means that it is currently an app based heavily on trust that you only act as yourself - but there is nothing stopping you from making a review or posting an advert as another user. As the key aim of this project was to consolidate the learning previous to the project, this was overlooked and not considered part of the MVP.
+
+- Advert Images:
+
+Another further extension would be to allow the user to upload advert images, which would be stored alongside the advert to be displayed back onto the front-end.
