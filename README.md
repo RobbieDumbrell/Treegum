@@ -15,7 +15,7 @@ https://robbie-treegum.herokuapp.com/
 
 - User Login:
 
-The biggest extension point for this app is the fact that it lacks a login system, which means that it is currently an app based heavily on trust that you only act as yourself - but there is nothing stopping you from making a review or posting an advert as another user. As the key aim of this project was to consolidate the learning previous to the project, this was overlooked and not considered part of the MVP.
+The biggest extension point for this app is the fact that it lacks a login system, which means that it is currently an app based heavily on trust that you only act as yourself - but there is nothing stopping you from making a review or posting an advert as another user. As the key aim of this project was to consolidate the learning previous to the project, this was (knowingly) overlooked and not considered part of the MVP.
 
 - Advert Images:
 
